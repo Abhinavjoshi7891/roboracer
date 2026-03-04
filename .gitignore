@@ -1,0 +1,9 @@
+build/
+install/
+log/
+.vscode/
+*.pyc
+__pycache__/
+docker_data/
+simulator/
+envs/
