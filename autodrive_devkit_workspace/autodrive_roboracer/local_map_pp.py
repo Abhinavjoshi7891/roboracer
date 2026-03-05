@@ -55,11 +55,11 @@ THROTTLE_SPEED_GAIN = 0.05  # throttle = speed_mps * gain (start conservative)
 MAX_THROTTLE = 0.5          # Clamp max throttle (increase after testing)
 
 # ============ Track Mapping & Curvature Speed Control ============
-MAPPING_SPEED = 1.5             # m/s — slow speed for lap 1 mapping
-RACING_SPEED_MAX = 4.0          # m/s — max speed on straights during racing laps
-MIN_CORNER_SPEED = 1.2          # m/s — minimum speed even through tightest corners
-CURVATURE_LOOKAHEAD_M = 3.0     # meters — how far ahead to check for curvature
-A_LAT_MAX_CORNERING = 2.5       # m/s² — max lateral acceleration for speed limiting
+MAPPING_SPEED = 1.5             # m/s — slow speed for lap 0 mapping
+RACING_SPEED_MAX = 6.0          # m/s — max speed on straights during racing laps
+MIN_CORNER_SPEED = 1.5          # m/s — minimum speed even through tightest corners
+CURVATURE_LOOKAHEAD_M = 4.0     # meters — how far ahead to check for curvature
+A_LAT_MAX_CORNERING = 3.5       # m/s² — max lateral acceleration for speed limiting
 MAP_SAMPLE_DIST = 0.15          # meters — minimum distance between map points
 
 
