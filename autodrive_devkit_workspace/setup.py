@@ -27,6 +27,8 @@ setup(
             'autodrive_bridge = autodrive_roboracer.autodrive_bridge:main', # AutoDRIVE ROS 2 bridge
             'teleop_keyboard = autodrive_roboracer.teleop_keyboard:main', # Teleoperation with keyboard
             'gap_follower = autodrive_roboracer.gap_follower:main', # Gap follower autonomous racing
+            'local_map_pp = autodrive_roboracer.local_map_pp:main',
+            'telemetry_logger = autodrive_roboracer.telemetry_logger:main',
         ],
     },
 )

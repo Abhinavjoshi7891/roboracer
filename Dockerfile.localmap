@@ -1,0 +1,16 @@
+FROM autodriveecosystem/autodrive_roboracer_api:practice
+
+# Install Python dependencies for LocalMapPP
+RUN pip3 install --no-cache-dir \
+    scipy \
+    quadprog==0.1.11 \
+    numba
+
+# Install trajectory-planning-helpers from local clone to ensure F1TENTH API compatibility
+COPY trajectory_planning_helpers /tmp/tph
+RUN cd /tmp/tph && pip3 install . && rm -rf /tmp/tph
+
+# Pre-compile numba caches (optional, speeds up first run)
+RUN python3 -c "import numba; print('Numba OK:', numba.__version__)"
+RUN python3 -c "import quadprog; print('Quadprog OK')"
+RUN python3 -c "import trajectory_planning_helpers as tph; print('TPH OK')"
